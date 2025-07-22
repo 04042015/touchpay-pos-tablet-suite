@@ -12,6 +12,11 @@ import Tables from "./pages/Tables";
 import Products from "./pages/Products";
 import Categories from "./pages/Categories";
 import NotFound from "./pages/NotFound";
+import KitchenDisplay from "./pages/KitchenDisplay";
+import CustomerProfiles from "./pages/CustomerProfiles";
+import PromoManagement from "./pages/PromoManagement";
+import DailyChecklist from "./pages/DailyChecklist";
+import PaymentMethods from "./pages/PaymentMethods";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +62,33 @@ const App = () => (
             <Route path="/categories" element={
               <ProtectedRoute>
                 <Categories />
+              </ProtectedRoute>
+            } />
+            
+            {/* Advanced Feature Routes */}
+            <Route path="/kitchen" element={
+              <ProtectedRoute>
+                <KitchenDisplay />
+              </ProtectedRoute>
+            } />
+            <Route path="/customers" element={
+              <ProtectedRoute>
+                <CustomerProfiles />
+              </ProtectedRoute>
+            } />
+            <Route path="/promos" element={
+              <ProtectedRoute>
+                <PromoManagement />
+              </ProtectedRoute>
+            } />
+            <Route path="/checklist" element={
+              <ProtectedRoute>
+                <DailyChecklist />
+              </ProtectedRoute>
+            } />
+            <Route path="/payment-methods" element={
+              <ProtectedRoute>
+                <PaymentMethods />
               </ProtectedRoute>
             } />
             
