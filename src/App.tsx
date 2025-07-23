@@ -17,6 +17,13 @@ import CustomerProfiles from "./pages/CustomerProfiles";
 import PromoManagement from "./pages/PromoManagement";
 import DailyChecklist from "./pages/DailyChecklist";
 import PaymentMethods from "./pages/PaymentMethods";
+import Orders from "./pages/Orders";
+import Queue from "./pages/Queue";
+import Payments from "./pages/Payments";
+import Transactions from "./pages/Transactions";
+import Reports from "./pages/Reports";
+import Users from "./pages/Users";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -43,7 +50,7 @@ const App = () => (
             <Route path="/login" element={<Login />} />
             
             {/* Protected Routes */}
-            <Route path="/" element={<Navigate to="/dashboard" replace />} />
+            <Route path="/" element={<Navigate to="/tables" replace />} />
             <Route path="/dashboard" element={
               <ProtectedRoute>
                 <Dashboard />
@@ -92,61 +99,40 @@ const App = () => (
               </ProtectedRoute>
             } />
             
-            {/* Placeholder routes for future pages */}
+            {/* Feature Pages */}
             <Route path="/orders" element={
               <ProtectedRoute>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Halaman Pemesanan</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Orders />
               </ProtectedRoute>
             } />
             <Route path="/queue" element={
               <ProtectedRoute>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Antrian Pesanan</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Queue />
               </ProtectedRoute>
             } />
             <Route path="/payments" element={
               <ProtectedRoute>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Pembayaran</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Payments />
               </ProtectedRoute>
             } />
             <Route path="/transactions" element={
               <ProtectedRoute>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Riwayat Transaksi</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Transactions />
               </ProtectedRoute>
             } />
             <Route path="/reports" element={
               <ProtectedRoute>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Laporan</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Reports />
               </ProtectedRoute>
             } />
             <Route path="/users" element={
               <ProtectedRoute>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Manajemen Pengguna</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Users />
               </ProtectedRoute>
             } />
             <Route path="/settings" element={
               <ProtectedRoute>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Pengaturan</h1>
-                  <p className="text-muted-foreground mt-2">Coming soon...</p>
-                </div>
+                <Settings />
               </ProtectedRoute>
             } />
             
